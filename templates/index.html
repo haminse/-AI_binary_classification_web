@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src = "{{ url_for('static', filename='frontend_function.js') }}"></script>
+    <title>Dog or Cat?</title>
+</head>
+<body>
+    <h1>Dog or Cat?</h1>
+    <p id="note1">Input your Image and AI will detect your picture!</p>
+    <p id='note2'>Note : This AI only detect dog or cat</p>
+    <div id = "image_input_box">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="image-input" id = "image_input">Selcet an image : </label>
+            <input type="file" id="image-input" name="image" onchange="previewImage(this);">
+            <img id="preview" src="#" alt="Preview Image">
+            <br>
+            <input id = 'upload_btn' type="submit" value="Upload">
+        </form>
+    </div>
+
+    {% if answer %}
+        <!-- <img id = 'afterimage' src = "{{ url_for('static', filename=img_path) }}" height = '224px', width = '224px'> -->
+        <p id = 'result' width = '400px'>
+            <img id = 'ai' src = 'static/artificial-intelligence.png' width = '75px'>
+            {{answer}}
+        </p>
+    {% endif %}
+    <footer>
+        <a href="/info">
+            <button> <strong>Project Info</strong>
+                <svg viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" fill-rule="evenodd"></path>
+                </svg>
+            </button>
+        </a>
+    </footer>
+</body>
+
+</html>

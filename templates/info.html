@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Flask-AI-Deploy-Info</title>
+</head>
+<body>
+    <h1>Project Info</h1>
+    <li>Project Name : AI binary classification web service production (end-to-end)</li>
+    <li>Project Purpose : Get used to entire process of AI engineering & Integrate AI with Web technologis </li>
+    <li>Project Preiod : 04.06.2023 ~ 04.13.2023 </li>
+    <li>Languages : HTML, CSS, JavaScript, Jinja, Python</li>
+    <li>Frameworks : Flask, Tensorflow, Keras, Pillow</li>
+    <p id = 'myself'>
+        <h3>Developer Info</h3>
+        <li>Name : Minse Ha</li>
+        <li>Profession : Computer Science, Artificial Intelligence</li>
+        <li><a href = 'https://github.com/haminse'>Github</a></li>
+        <li><a href = 'https://aminss.tistory.com/'>BLOG</a></li>
+        <li><a href = 'https://www.linkedin.com/in/haminse/'>LinkedIn</a></li>
+
+
+    </p>
+
+    <p id = 'version'>
+        <h3>SERVER VERSION SETUP</h3>
+        <ol>
+            <li>Tensorflow : 2.12.0</li>
+            <li>keras : 2.12.0</li>
+            <li>python : 3.9.16</li>
+            <li>flask : 2.2.3</li>
+            <li>pillow : 9.5.0</li>
+        </ol>
+    </p>
+    <p id = 'model'>
+        <h3>AI MODEL INFO</h3>
+        <li>AI Framework : Tensorflow, Keras, PIL</li>
+        <li>Model Type : Binary Classifier</li>
+        <li>Data Learned : Tensorflow Cats vs Dogs dataset</li>
+        <li>Data Size : Train(18610) / test(4652)</li>
+        <li>Pretrained Model : Keras MobileNetV2(weight = "imagenet")</li>
+        <li>Loss/Metric : Binary Crossentropy / Binary Accuracy </li>
+        <li>Optimizer : Adam(keras) </li>
+        <li>Epochs : 20(only the top dense layer) / 10(after unfreeze all layer)</li>
+        <li>Batch Size : 32 </li>
+    </p>
+    <p id = 'web'>
+        <h3>WEB INFO</h3>
+        <li>Backend : Flask, Python</li>
+        <li>Frontend : HTML, CSS, JavaScript, Jinja</li>
+    </p>
+    <footer>
+        <h3><a href = 'https://minse-web-dev-total.netlify.app/'>More Webservices</a></h3>
+    </footer>
+</body>
+</html>
