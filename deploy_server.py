@@ -38,7 +38,7 @@ def upload():
     # to not save the user input
     _, temp_file_path = tempfile.mkstemp() # when I dont want to save image but no display after upload also
     
-    # to save the user input
+    # to save the user input img
     # temp_file_path = 'static/' + img.filename
 
     img.save(temp_file_path)
