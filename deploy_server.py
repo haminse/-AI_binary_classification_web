@@ -60,4 +60,9 @@ def upload():
 def info():
     return render_template('info.html')
 
-app.run(debug = True, port = 5003)
+# to debug in local
+# app.run(debug = True, port = 5003)
+
+# to deploy
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=80)
