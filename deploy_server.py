@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, redirect
 import tensorflow as tf
-from tensorflow import keras
-from keras.models import load_model
+# from tensorflow import keras
+from tensorflow.keras.models import load_model
 # from keras.preprocessing import image
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import tempfile
-import os
+# import os
 
 # loss_fn = tf.keras.losses.BinaryCrossentropy(from_logits=True)
 # optimizer = tf.keras.optimizers.Adam()
@@ -49,7 +49,7 @@ def upload():
     #predict the label
     rst = predict_label(image)
     # pass the image path to the template
-    img_path = os.path.basename(temp_file_path)
+    # img_path = os.path.basename(temp_file_path)
 
     #delete the user image
     # os.remove(temp_file_path)
@@ -61,8 +61,8 @@ def info():
     return render_template('info.html')
 
 # to debug in local
-# app.run(debug = True, port = 5003)
+app.run(debug = True, port = 5003)
 
 # to deploy
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80)
+# if __name__ == "__main__":
+#     app.run(host='0.0.0.0', port=80)

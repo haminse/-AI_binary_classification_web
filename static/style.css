@@ -29,6 +29,7 @@ h3{
 #preview{
     margin : 3%;
     display: none;
+    width : 400px;
 }
 
 #upload_btn{
